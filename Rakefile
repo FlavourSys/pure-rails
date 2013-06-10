@@ -28,7 +28,7 @@ namespace :pure do
       raise "failed to fetch #{url}" unless resp.code == 200
       
       # Delete old version.
-      asset = File.join(File.dirname(__FILE__), 'vendor/assets/stylesheets/pure-min.css')
+      asset = File.join(File.dirname(__FILE__), 'vendor/assets/stylesheets/pure.css')
       FileUtils.rm(asset)
       
       # Write new version.
