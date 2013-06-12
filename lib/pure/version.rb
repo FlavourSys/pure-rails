@@ -1,6 +1,6 @@
 module Pure
   module Rails
-    VERSION = '0.1.0'
+    VERSION = '0.2.0'
 
     def self.update_version(str)
       this = File.read(__FILE__)
