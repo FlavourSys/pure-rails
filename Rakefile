@@ -27,12 +27,9 @@ namespace :pure do
       resp = HTTParty.get url
       raise "failed to fetch #{url}" unless resp.code == 200
       
-      # Delete old version.
-      asset = File.join(File.dirname(__FILE__), 'vendor/assets/stylesheets/pure.css')
-      FileUtils.rm(asset)
-      
       # Write new version.
-      File.open(asset, 'w') { |fd| fd.write(resp.body) }
+      asset = File.join(File.dirname(__FILE__), 'vendor/assets/stylesheets/pure.css')
+      File.open(asset, 'wb') { |fd| fd.write(resp.body) }
 
       # Update version number.
       Pure::Rails.update_version version
