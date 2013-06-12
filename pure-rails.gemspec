@@ -10,6 +10,7 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/flavoursys/pure-rails'
   s.summary     = %q{Pure CSS for Rails}
   s.description = %{A gem which injects the Yahoo Pure CSS framework into your RoR application}
+  s.license     = 'MIT'
 
   s.files = Dir["{lib,vendor}/**/*"] + ['MIT-LICENSE', 'Rakefile', 'README.md']
 
